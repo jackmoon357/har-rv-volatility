@@ -475,6 +475,19 @@ wheels = [
 ]
 
 [[package]]
+name = "dukascopy-python"
+version = "4.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pandas" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/34/7f/c054097e4020696ac3c4a9e85ab9a75342e01e593dbe60adc14148924ea1/dukascopy_python-4.0.1.tar.gz", hash = "sha256:5bdcf2c8a72d69ec035a56e59b5534a96ccbbbecdbe4f22d74608d88eaf39b64", size = 19326, upload-time = "2025-04-28T19:11:58.519Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e4/0c/bddb653f83f7e721044910e329f4e2b87569e676b58520e91296dc7f7237/dukascopy_python-4.0.1-py3-none-any.whl", hash = "sha256:bb7ccb9b38e43276f08256c41f66ca38fd972d0d5db0081660ee652d14ddf431", size = 17023, upload-time = "2025-04-28T19:11:54.489Z" },
+]
+
+[[package]]
 name = "executing"
 version = "2.2.1"
 source = { registry = "https://pypi.org/simple" }
@@ -564,6 +577,7 @@ name = "har-rv-volatility"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "dukascopy-python" },
     { name = "jupyter" },
     { name = "matplotlib" },
     { name = "numpy" },
@@ -578,16 +592,17 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "jupyter", specifier = ">=1.1.1" },
-    { name = "matplotlib", specifier = ">=3.11.0" },
-    { name = "numpy", specifier = ">=2.4.6" },
-    { name = "pandas", specifier = ">=3.0.3" },
-    { name = "pyarrow", specifier = ">=24.0.0" },
-    { name = "pytest", specifier = ">=9.0.3" },
-    { name = "ruff", specifier = ">=0.15.17" },
-    { name = "scikit-learn", specifier = ">=1.9.0" },
-    { name = "statsmodels", specifier = ">=0.14.6" },
-    { name = "xgboost", specifier = ">=3.2.0" },
+    { name = "dukascopy-python", specifier = ">=4.0.1" },
+    { name = "jupyter", specifier = ">=1.0" },
+    { name = "matplotlib", specifier = ">=3.8" },
+    { name = "numpy", specifier = ">=1.26" },
+    { name = "pandas", specifier = ">=2.2" },
+    { name = "pyarrow", specifier = ">=15.0" },
+    { name = "pytest", specifier = ">=8.0" },
+    { name = "ruff", specifier = ">=0.4" },
+    { name = "scikit-learn", specifier = ">=1.4" },
+    { name = "statsmodels", specifier = ">=0.14" },
+    { name = "xgboost", specifier = ">=2.0" },
 ]
 
 [[package]]
